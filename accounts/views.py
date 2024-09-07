@@ -37,7 +37,7 @@ class ResetPassword(UpdateAPIView):
 
         user=request.user
         if not user.check_password(current_password):
-            return Response({"details":"Current Password is wrong"})
+            return Response({"detaixls":"Current Password is wrong"})
         
         if new_password != confirm_password:
             return Response({"details":"Password doesn't matched"})
